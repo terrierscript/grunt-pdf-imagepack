@@ -1,6 +1,6 @@
 /*
  * pdf-imagepack
- * 
+ *
  *
  * Copyright (c) 2014 suisho
  * Licensed under the MIT license.
@@ -33,22 +33,13 @@ module.exports = function (grunt) {
 
     // Configuration to be run (and then tested).
     pdf_imagepack: {
-      default_options: {
+      default: {
         options: {
         },
         files: {
-          'tmp/default_options': ['test/fixtures/testing', 'test/fixtures/123']
+          'tmp/sample.pdf': ['node_modules/pdf-image-pack/fixture/basic/*']
         }
       },
-      custom_options: {
-        options: {
-          separator: ': ',
-          punctuation: ' !!!'
-        },
-        files: {
-          'tmp/custom_options': ['test/fixtures/testing', 'test/fixtures/123']
-        }
-      }
     },
 
     // Unit tests.
