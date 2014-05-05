@@ -5,8 +5,8 @@
  * Copyright (c) 2014 suisho
  * Licensed under the MIT license.
  */
-var PDFImagePack = require("pdf-image-pack")
 'use strict';
+var PDFImagePack = require("pdf-image-pack");
 
 module.exports = function (grunt) {
 
@@ -32,16 +32,16 @@ module.exports = function (grunt) {
         } else {
           return true;
         }
-      })
-      var imagePack = new PDFImagePack(options.pdf)
+      });
+      var imagePack = new PDFImagePack(options.pdf);
       imagePack.output(srcImages, file.dest, function(err){
         if(err){
-          grunt.log.warn('error ' + err)
+          grunt.log.warn('error ' + err);
         }
         // Print a success message.
         grunt.log.writeln('File "' + file.dest + '" created.');
-        done()
-      })
+        done();
+      });
     });
   });
 
