@@ -33,11 +33,19 @@ module.exports = function (grunt) {
 
     // Configuration to be run (and then tested).
     pdf_imagepack: {
-      default: {
-        options: {
-        },
+      defaults: {
         files: {
           'tmp/sample.pdf': ['node_modules/pdf-image-pack/fixture/basic/*']
+        }
+      },
+      with_pdf_option: {
+        options : {
+          pdf : {
+            size : "B5"
+          }
+        },
+        files: {
+          'tmp/sample_with_option.pdf': ['node_modules/pdf-image-pack/fixture/basic/*']
         }
       },
     },

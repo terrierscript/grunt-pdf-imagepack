@@ -7,7 +7,7 @@
  */
 'use strict';
 var PDFImagePack = require("pdf-image-pack");
-
+var path = require("path");
 module.exports = function (grunt) {
 
   // Please see the Grunt documentation for more information regarding task
@@ -20,7 +20,6 @@ module.exports = function (grunt) {
     var options = this.options({
       pdf : {} // pdf option
     });
-
     // Iterate over all specified file groups.
     this.files.forEach(function (file) {
       // Concat specified files.
@@ -34,6 +33,8 @@ module.exports = function (grunt) {
         }
       });
       var imagePack = new PDFImagePack(options.pdf);
+      // PDFKit use stream.
+      grunt.file.mkdir(path.dirname(file.dest));
       imagePack.output(srcImages, file.dest, function(err){
         if(err){
           grunt.log.warn('error ' + err);
