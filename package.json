@@ -1,5 +1,5 @@
 {
-  "name": "pdf-imagepack",
+  "name": "grunt-pdf-imagepack",
   "version": "0.0.2",
   "description": "Generate image packed pdf",
   "repository": "",
@@ -8,7 +8,7 @@
     "email": "suisho000000@gmail.com"
   },
   "keywords": [
-    "gruntplugin"
+    "gruntplugin", "image", "pdf"
   ],
   "main": "Gruntfile.js",
   "engines": {
