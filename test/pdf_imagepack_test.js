@@ -36,12 +36,12 @@ exports.pdf_imagepack = {
     test.equal(actual, expected, 'should describe what the default behavior is.');
 
     test.done();
-  }
+  },
   with_option: function (test) {
     test.expect(1);
 
     var actual = 8533;
-    var stat = fs.statSync('tmp/sample.pdf');
+    var stat = fs.statSync('tmp/sample_with_option.pdf');
     var expected = stat.size;
     test.equal(actual, expected, 'should describe what the default behavior is.');
 
